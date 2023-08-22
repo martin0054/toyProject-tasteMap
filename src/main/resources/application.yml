@@ -1,0 +1,36 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://192.168.2.248:5432/lhr
+    username: lhr
+    password: lhr
+  hikari:
+    connection-timeout: 1000
+    maximum-pool-size: 10
+    minimum-idle: 1
+    pool-name: basic_connection_pool
+
+jpa:
+  show-sql: true
+  #??
+  generate-ddl: false
+  hibernate.ddl-auto: none
+  # ??
+  #generate-ddl: false  #DDL ??? ?? database? ??? ???
+  #hibernate.ddl-auto: validate #relation? ???? ??
+  hibernate:
+    naming:
+      implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+      physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  properties:
+    hibernate:
+      diarect: org.hibernate.dialect.H2Dialect  # ??? ??? ?? ?????? ??? ?????.
+      show_sql: false  # sql ??? ?????.
+      use_sql_comments: false  # sql ??? ????? ?????.
+      format_sql: false

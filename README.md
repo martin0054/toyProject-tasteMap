@@ -1,9 +1,7 @@
-# vue_study
+# vue study 를 위한 toyProject
 
-#toyProject 
+# spring boot : 2.7.14
 
-#gradle 3.1.2
-#java 17 
+# java 11 
 
-
-#spring boot / vue.js 
+# vue.js 
